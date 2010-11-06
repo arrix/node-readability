@@ -1,0 +1,48 @@
+{
+    "name": "readability",
+    "version": "0.0.1",
+    "description": "Arc90's readability.js adapted to node.js",
+    "keywords": [
+        "readability"
+    ],
+    "maintainers": [
+        {
+            "name": "Arrix",
+            "email": "arrixzhou@gmail.com",
+            "web": "http://arrix.blogspot.com"
+        }
+    ],
+    "contributors": [
+        {
+            "name": "Vincent Cao",
+            "email": "caojunvincent@gmail.com"
+        }
+    ],
+    "bugs": {
+        "mail": "arrixzhou@gmail.com",
+        "web": "http://github.com/arrix/node-readability/issues"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://github.com/arrix/node-readability/LICENSE.txt"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "http://github.com/arrix/node-readability.git"
+        }
+    ],
+    "dependencies": {
+       "mjsunit.runner": ">=0.1.0",
+       "jsdom": ">=0.1.20",
+       "htmlparser": ">=1.7.0"
+    },
+    "engines" : { "node" : ">=0.3.1" },
+    "directories": {
+        "lib": "lib"
+    },
+    "main": "./lib/readability"
+}
+

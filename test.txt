@@ -1,0 +1,14 @@
+http://127.0.0.1:3000/?url=http%3A%2F%2Fwww.bbc.co.uk%2Fukchina%2Fsimp%2Fentertainment%2F2010%2F11%2F101103_ent_harrypotter.shtml
+
+http://127.0.0.1:3000/?url=http://en.wikipedia.org/wiki/Ruby
+http://127.0.0.1:3000/?url=http://buzz.blogger.com/2010/10/safe-browsing-on-blogger.html
+http://127.0.0.1:3000/?url=http://www.ifanr.com/24614
+http://127.0.0.1:3000/?url=http://www.boston.com/news/politics/articles/2010/11/03/patrick_roars_to_a_2d_term/
+
+
+problems:
+slow
+http://www.gazeta.ru/news/lastnews/
+
+returned html cannot be parsed by browser
+http://blog.zacharyvoase.com/2010/11/11/sockets-and-nodes-i/

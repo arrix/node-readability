@@ -1,0 +1,25 @@
+# live NodeList
+NodeLists returned by node.childNodes and getElementsByXxx() apis are live which means changes to the DOM tree will be reflected in the NodeList when accessed.
+
+In jsdom's implementation, a live NodeList is updated when item() or length is accessed but not when the [index] is accessed.
+In a live NodeList iteration, you must carefully call list.update() (or just list.length) to trigger an update.
+Beware that NodeList update is very expensive! When possible, prefer DOM transversal over getElementsByXxx();
+
+If no changes will be made the the subtree, it is a good idea to iterate over an Array. 
+var arr = nodeList.toArray(); //toArray() is not in the standards
+var arr = Array.prototype.slice.call(nodeList);
+
+
+
+# performance
+grep TOTAL clean.log|cut -d ' ' -f5|sort -n
+
+irb>
+s = <<EOT
+...
+EOT
+a = s.split("\n").map(&:to_f)
+avg = a.reduce{|x,y| x+y} / a.size
+def hist(array)
+  
+end
