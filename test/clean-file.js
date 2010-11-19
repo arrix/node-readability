@@ -21,7 +21,6 @@ function batch_run() {
     var files = fs.readdirSync(dir);
     var results = [];
     //files.length = 10;
-    //files[0] = files.pop(); files.length = 1;
     files.forEach(function(f) {
         console.log('######## Processing file...', f);
         cleanFile(dir + f, '', function(result) {
@@ -30,7 +29,7 @@ function batch_run() {
     });
     
     var total = 0, totalTime = 0;
-    results.filter(function(v) {return !v.error}).sort(function(a, b) {return a - b;}).forEach(function(r) {
+    results.filter(function(v) {return !v.error}).sort(function(a, b) {return a.time - b.time;}).forEach(function(r) {
         total++;
         totalTime += r.time;
         console.log(sprintf('%5.2f\t%8d\t%10s', r.time, r.inputLength, r.file));
