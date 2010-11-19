@@ -4,7 +4,7 @@
 // https://github.com/tmpvar/jsdom/issues/#issue/77
 
 var jsdom = require('jsdom');
-var html = '<html><body><p id="p1"></p><p id="p2"></p></body></html>';
+var html = '<html><body>&nbsp;<p id="p1"></p><p id="p2"></p></body></html>';
 var window = jsdom.jsdom(html).createWindow();
 var document = window.document;
 

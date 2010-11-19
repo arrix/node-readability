@@ -9,8 +9,23 @@ If no changes will be made the the subtree, it is a good idea to iterate over an
 var arr = nodeList.toArray(); //toArray() is not in the standards
 var arr = Array.prototype.slice.call(nodeList);
 
+# nodeList._length
+WRONG: In jsom the length getter property of a NodeList calls .update() which re-query against the DOM tree. In a read only loop, it is more efficient to access ._length instead of .length.
+var nodes = ele.getElementsByTagName('div'), i, len;
+for (i = 0, len = nodes._length; i < len, i++) {
+    //does not change the dom structure
+}
+childNodes._length may not be update to date!!!!!
 
+# .textContent
+readability.getInnerText is very frequently used function. My optimization for it reduced the total running time by half. 
+// hundredfold faster
+// use native string.trim
+// jsdom's implementation of textContent is innerHTML + strip tags + HTMLDecode
+// here we replace it with an optimized tree walker
 
+# cleanStyles
+cleanStyles is recursive, it counts for most running time of prepArticle
 # performance
 grep TOTAL clean.log|cut -d ' ' -f5|sort -n
 

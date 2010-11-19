@@ -8,7 +8,8 @@ http://127.0.0.1:3000/?url=http://www.boston.com/news/politics/articles/2010/11/
 
 problems:
 slow
-http://www.gazeta.ru/news/lastnews/
+http://127.0.0.1:3000/?url=http://www.gazeta.ru/news/lastnews/
+http://127.0.0.1:3000/?url=http://www.sqlite.org/fts3.html
 
 returned html cannot be parsed by browser
 http://blog.zacharyvoase.com/2010/11/11/sockets-and-nodes-i/
