@@ -38,3 +38,19 @@ avg = a.reduce{|x,y| x+y} / a.size
 def hist(array)
   
 end
+
+# sum profiler output
+s = <<EOT
+19 Nov 12:56:08 -       0.233 seconds [killBreaks] 
+19 Nov 12:56:08 -       0.069 seconds [cleanConditionally] 
+19 Nov 12:56:09 -       0.071 seconds [clean] 
+19 Nov 12:56:09 -       0.074 seconds [clean] 
+19 Nov 12:56:09 -       0.068 seconds [clean] 
+19 Nov 12:56:09 -       0.139 seconds [cleanHeaders] 
+19 Nov 12:56:09 -       0.241 seconds [cleanConditionally] 
+19 Nov 12:56:09 -       0.088 seconds [cleanConditionally] 
+19 Nov 12:56:09 -       0.233 seconds [cleanConditionally] 
+19 Nov 12:56:10 -       0.507 seconds [prepArticle Remove extra paragraphs] 
+19 Nov 12:56:11 -       0.568 seconds [prepArticle innerHTML replacement]
+EOT
+s.scan(/\s([.\d]+)\s+seconds/).flatten.map(&:to_f).reduce{|a,b|a+b}
