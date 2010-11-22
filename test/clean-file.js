@@ -10,11 +10,11 @@ function cleanFile(path, url, cb) {
     readability.parse(content, url, cb);
 }
 
-// cleanFile(__dirname + '/pages/http___www_youtube_com_watch_v_HBnNoF71W2Q.html', '', function(info) {
+// cleanFile(__dirname + '/pages/Proyectos_de_creaci_n_de_empresas___til_para_el_emprendedor__Ofertas____.html', '', function(info) {
 //     //console.log(info.content);
 // });
 // 
-// process.exit();
+// return;
 
 function batch_run() {
     var dir = __dirname + '/pages/';
