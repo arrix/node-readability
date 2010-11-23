@@ -41,12 +41,15 @@ module Program
     def run
       dir = File.expand_path('../pages', __FILE__)
       FileUtils.mkdir(dir) unless File.exists? dir
-
-      parse_rss(fetch_digg_feed) do |url, title|
-        filename = title.gsub(/\W/, '_') + '.html'
-        filepath = File.join(dir, filename)
-        puts "fetching #{url} as #{filepath}"
-        puts `curl #{url} > #{filepath} &`
+      
+      [fetch_digg_feed, fetch_hackernews_feed, fetch_delicious_feed].each do |feed|
+        parse_rss(feed) do |url, title|
+          filename = title.gsub(/\W/, '_') + '.html'
+          filepath = File.join(dir, filename)
+          puts "fetching #{url} as #{filepath}"
+          puts `curl --connect-timeout=5 #{url} > #{filepath} &`
+          sleep 1
+        end
       end
     end
     

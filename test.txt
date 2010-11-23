@@ -10,6 +10,7 @@ problems:
 slow
 http://127.0.0.1:3000/?url=http://www.gazeta.ru/news/lastnews/
 http://127.0.0.1:3000/?url=http://www.sqlite.org/fts3.html
+http://127.0.0.1:3000/?url=http://news.google.com.hk/nwshp?hl=zh-tw&tab=in
 
 returned html cannot be parsed by browser
 http://blog.zacharyvoase.com/2010/11/11/sockets-and-nodes-i/

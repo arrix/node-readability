@@ -26,6 +26,11 @@ readability.getInnerText is very frequently used function. My optimization for i
 
 # cleanStyles
 cleanStyles is recursive, it counts for most running time of prepArticle
+
+# security
+arbitrary js
+frames
+
 # performance
 grep TOTAL clean.log|cut -d ' ' -f5|sort -n
 
@@ -37,6 +42,12 @@ a = s.split("\n").map(&:to_f)
 avg = a.reduce{|x,y| x+y} / a.size
 def hist(array)
   
+end
+
+
+def avg(s, regex) 
+    a = s.scan(regex).flatten.map(&:to_f)
+    a.reduce{|x,y| x+y}/a.size
 end
 
 # sum profiler output
