@@ -9,12 +9,13 @@ function cleanFile(path, url, cb) {
     var content = fs.readFileSync(path, 'utf-8');
     readability.parse(content, url, cb);
 }
-
-// cleanFile(__dirname + '/pages/Proyectos_de_creaci_n_de_empresas___til_para_el_emprendedor__Ofertas____.html', '', function(info) {
-//     //console.log(info.content);
-// });
-// 
-// return;
+if (1) {
+ cleanFile(__dirname + '/weird-pages/w3c-css-no-closing-head.html', '', function(info) {
+     //console.log(info.content);
+ });
+ 
+ return;
+}
 
 function batch_run() {
     var dir = __dirname + '/pages/';
@@ -22,6 +23,7 @@ function batch_run() {
     var results = [];
     //files.length = 10;
     files.forEach(function(f) {
+		if (!/\.html/i.test(f)) return;
         console.log('######## Processing file...', f);
         cleanFile(dir + f, '', function(result) {
             results.push({time: result.time, file: f, inputLength: result.inputLength, error: result.error});
