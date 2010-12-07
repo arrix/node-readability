@@ -1,6 +1,6 @@
 {
     "name": "readability",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "Arc90's readability.js adapted to node.js",
     "keywords": [
         "readability"
@@ -13,6 +13,11 @@
         }
     ],
     "contributors": [
+        {
+            "name": "Arrix",
+            "email": "arrixzhou@gmail.com",
+            "web": "http://arrix.blogspot.com"
+        },
         {
             "name": "Vincent Cao",
             "email": "caojunvincent@gmail.com"
@@ -36,8 +41,8 @@
     ],
     "dependencies": {
        "mjsunit.runner": ">=0.1.0",
-       "jsdom": ">=0.1.20",
-       "htmlparser": ">=1.7.0"
+       "jsdom": ">=0.1.21",
+       "htmlparser": ">=1.7.3"
     },
     "engines" : { "node" : ">=0.3.1" },
     "directories": {
