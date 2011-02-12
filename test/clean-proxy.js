@@ -93,7 +93,7 @@ http.createServer(function(req, res) {
                 // });
                 // clean.clean();
                 
-                readability2.parse(result.body, '', function(info) {
+                readability2.parse(result.body, '', {removeReadabilityArtifacts: false, removeClassNames: false, debug: true, profile: true}, function(info) {
                     res.write(CleanReading.prototype.wrapContent(info.title, info.content));
                     res.end();
                 });

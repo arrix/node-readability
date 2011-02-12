@@ -7,7 +7,7 @@ var readability = require('../lib/readability.js'),
 
 function cleanFile(path, url, cb) {
     var content = fs.readFileSync(path, 'utf-8');
-    readability.parse(content, url, cb);
+    readability.parse(content, url, {removeReadabilityArtifacts: false, removeClassNames: false, debug: true, profile: 1}, cb);
 }
 if (1) {
  cleanFile(__dirname + '/weird-pages/w3c-css-no-closing-head.html', '', function(info) {
