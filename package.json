@@ -42,7 +42,10 @@
     "dependencies": {
        "mjsunit.runner": ">=0.1.0",
        "jsdom": ">=0.1.21",
-       "htmlparser": ">=1.7.3"
+       "htmlparser": ">=1.7.3",
+       "html5":">0.1",
+       "main": "iconv",
+        "iconv":">=1.1.3"
     },
     "engines" : { "node" : ">=0.2.5" },
     "directories": {
