@@ -11,7 +11,7 @@ Blog post: [Server side readability with node.js](http://arrix.blogspot.com/2010
 I'm working on it...
 ## Example
 
-    var readability = require('readability');
+    var readability = require('node-readability');
     //...
     // This is an very early example. The API is subject to change.
     readability.parse(html, url, function(result) {
